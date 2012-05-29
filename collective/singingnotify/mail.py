@@ -97,16 +97,19 @@ action or enter an email in the portal properties'
             source = "%s <%s>" % (from_name, from_address)
 
         obj = self.event.object
-        #event_url = obj.absolute_url()
+        folder_url = self.context.absolute_url()
         channel = getattr(obj, 'channel', None)
         composer_data = getattr(obj, 'composer_data', None)
         message = self.element.message
+        message = message.replace("${url}", folder_url)
+        message = message.replace("${portal}", portal.Title())
         if channel:
             message = message.replace("${channel}", channel.title)
         if composer_data:
             message = message.replace("${subscriber}", composer_data.get('email', ''))
         subject = self.element.subject
-        #subject = subject.replace("${namedirectory}", self.context.Title())
+        subject = subject.replace("${url}", folder_url)
+        subject = subject.replace("${portal}", portal.Title())
         self.context.plone_log('sending to: %s' % dest_addr)
 
         try:
@@ -127,8 +130,8 @@ class UnsubscribeNotifyAddForm(AddForm):
     An add form for the mail action
     """
     form_fields = form.FormFields(IUnsubscribeNotifyAction)
-    label = _(u"Add Mail Group Action")
-    description = _(u"A mail action can mail different groups and members.")
+    label = _(u"Add S&D Unsubscription Mail Action")
+    description = _(u"A mail action that notify when an user unsubscribe from a channel.")
     form_name = _(u"Configure element")
 
     def create(self, data):
@@ -142,6 +145,6 @@ class UnsubscribeNotifyEditForm(EditForm):
     An edit form for the mail action
     """
     form_fields = form.FormFields(IUnsubscribeNotifyAction)
-    label = _(u"Edit Mail group Action")
-    description = _(u"A mail action can mail different recipient.")
+    label = _(u"Edit S&D Unsubscription Mail Action")
+    description = _(u"A mail action that notify when an user unsubscribe from a channel.")
     form_name = _(u"Configure element")

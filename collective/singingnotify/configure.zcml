@@ -8,6 +8,7 @@
     i18n_domain="collective.singingnotify">
 
   <five:registerPackage package="." initialize=".initialize" />
+  <i18n:registerTranslations directory="locales" />
   <include package="plone.contentrules" />
   <include package="plone.contentrules" file="meta.zcml" />
 
@@ -27,7 +28,7 @@
 
   <browser:page
     for="plone.app.contentrules.browser.interfaces.IRuleActionAdding"
-    name="plone.actions.SeDUnsubscribeNotify"
+    name="plone.actions.SingingUnsubscribeNotify"
     class=".mail.UnsubscribeNotifyAddForm"
     permission="cmf.ManagePortal"
     />
@@ -40,8 +41,8 @@
     />
 
   <plone:ruleAction
-    name="plone.actions.SeDUnsubscribeNotify"
-    title="Send email when an user unsubscribe for a channel"
+    name="plone.actions.SingingUnsubscribeNotify"
+    title="Send email when an user unsubscribe from a channel"
     description="Send an email on the triggering object."
     for="collective.singing.interfaces.ISubscription"
     event="zope.app.intid.interfaces.IIntIdRemovedEvent"
