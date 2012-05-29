@@ -111,7 +111,6 @@ action or enter an email in the portal properties'
         subject = subject.replace("${url}", folder_url)
         subject = subject.replace("${portal}", portal.Title())
         self.context.plone_log('sending to: %s' % dest_addr)
-
         try:
             # sending mail in Plone 4
             mailhost.send(message, mto=dest_addr, mfrom=source,
@@ -131,7 +130,7 @@ class UnsubscribeNotifyAddForm(AddForm):
     """
     form_fields = form.FormFields(IUnsubscribeNotifyAction)
     label = _(u"Add S&D Unsubscription Mail Action")
-    description = _(u"A mail action that notify when an user unsubscribe from a channel.")
+    description = _(u"A mail action that send email notify when an user unsubscribe from a channel.")
     form_name = _(u"Configure element")
 
     def create(self, data):
@@ -146,5 +145,5 @@ class UnsubscribeNotifyEditForm(EditForm):
     """
     form_fields = form.FormFields(IUnsubscribeNotifyAction)
     label = _(u"Edit S&D Unsubscription Mail Action")
-    description = _(u"A mail action that notify when an user unsubscribe from a channel.")
+    description = _(u"A mail action that send email notify when an user unsubscribe from a channel.")
     form_name = _(u"Configure element")
