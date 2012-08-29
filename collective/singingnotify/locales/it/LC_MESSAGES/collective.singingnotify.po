@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-05-29 13:42+0000\n"
+"POT-Creation-Date: 2012-08-24 09:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Andrea Cecchi <andrea.cecchi@redturtle.it>\n"
 "Language-Team: RedTurtle Technology <sviluppoplone@redturtle.it>\n"
@@ -14,21 +14,21 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.singingnotify\n"
 
-#: ./mail.py:134
-msgid "A mail action that notify when an user unsubscribe from a channel."
-msgstr "Un'azione che notifica via mail quando un utente si disiscrive da un canale."
-
 #: ./mail.py:133
-msgid "Add S&D Unsubscription Mail Action"
-msgstr "Aggiungi Azione per disiscrizione a S&D"
+msgid "A mail action that sends email notify when an user will unsubscribe from a channel."
+msgstr "Viene spedita una notifica via mail quando un utente si cancella da un canale."
 
-#: ./mail.py:135
+#: ./mail.py:132
+msgid "Add S&D Unsubscription Mail Action"
+msgstr "Aggiungi azione per cancellazione da S&D"
+
+#: ./mail.py:134
 msgid "Configure element"
 msgstr "Configura l'elemento"
 
-#: ./mail.py:148
+#: ./mail.py:147
 msgid "Edit S&D Unsubscription Mail Action"
-msgstr "Modifica Azione per disiscrizione a S&D"
+msgstr "Modifica azione per cancellazione da S&D"
 
 #: ./mail.py:63
 msgid "Email report to ${dest_addr}"

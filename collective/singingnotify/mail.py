@@ -36,12 +36,12 @@ class IUnsubscribeNotifyAction(Interface):
         )
 
     message = schema.Text(
-        title = _(u"Message"),
-        description = _(u"Type in here the message that you want to mail. Some \
+        title=_(u"Message"),
+        description=_(u"Type in here the message that you want to mail. Some \
             defined content can be replaced: ${portal} will be replaced by the title \
             of the portal. ${url} will be replaced by the URL of the newsletter. \
             ${channel} will be replaced by the newsletter channel name. ${subscriber} will be replaced by subscriber name."),
-        required = True
+        required=True
         )
 
 
@@ -130,7 +130,7 @@ class UnsubscribeNotifyAddForm(AddForm):
     """
     form_fields = form.FormFields(IUnsubscribeNotifyAction)
     label = _(u"Add S&D Unsubscription Mail Action")
-    description = _(u"A mail action that send email notify when an user unsubscribe from a channel.")
+    description = _(u"A mail action that sends email notify when an user will unsubscribe from a channel.")
     form_name = _(u"Configure element")
 
     def create(self, data):
@@ -145,5 +145,5 @@ class UnsubscribeNotifyEditForm(EditForm):
     """
     form_fields = form.FormFields(IUnsubscribeNotifyAction)
     label = _(u"Edit S&D Unsubscription Mail Action")
-    description = _(u"A mail action that send email notify when an user unsubscribe from a channel.")
+    description = _(u"A mail action that sends email notify when an user will unsubscribe from a channel.")
     form_name = _(u"Configure element")

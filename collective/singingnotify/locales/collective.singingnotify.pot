@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-05-29 13:42+0000\n"
+"POT-Creation-Date: 2012-08-24 09:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.singingnotify\n"
 
-#: ./mail.py:134
-msgid "A mail action that notify when an user unsubscribe from a channel."
+#: ./mail.py:133
+msgid "A mail action that sends email notify when an user will unsubscribe from a channel."
 msgstr ""
 
-#: ./mail.py:133
+#: ./mail.py:132
 msgid "Add S&D Unsubscription Mail Action"
 msgstr ""
 
-#: ./mail.py:135
+#: ./mail.py:134
 msgid "Configure element"
 msgstr ""
 
-#: ./mail.py:148
+#: ./mail.py:147
 msgid "Edit S&D Unsubscription Mail Action"
 msgstr ""
 
