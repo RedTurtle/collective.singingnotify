@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-24 09:43+0000\n"
+"POT-Creation-Date: 2014-05-13 14:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,55 +17,67 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.singingnotify\n"
 
-#: ./mail.py:133
+#: ./mail.py:199
+msgid "A mail action that sends email notify when an user confirm his subscription in a channel."
+msgstr ""
+
+#: ./mail.py:174
 msgid "A mail action that sends email notify when an user will unsubscribe from a channel."
 msgstr ""
 
-#: ./mail.py:132
+#: ./mail.py:198
+msgid "Add S&D Confirm Subscription Mail Action"
+msgstr ""
+
+#: ./mail.py:173
 msgid "Add S&D Unsubscription Mail Action"
 msgstr ""
 
-#: ./mail.py:134
+#: ./mail.py:175
 msgid "Configure element"
 msgstr ""
 
-#: ./mail.py:147
+#: ./mail.py:213
+msgid "Edit S&D Confirm Subscription Mail Action"
+msgstr ""
+
+#: ./mail.py:188
 msgid "Edit S&D Unsubscription Mail Action"
 msgstr ""
 
-#: ./mail.py:63
+#: ./mail.py:32
 msgid "Email report to ${dest_addr}"
 msgstr ""
 
-#: ./mail.py:39
+#: ./interfaces.py:30
 msgid "Message"
 msgstr ""
 
-#: ./mail.py:33
+#: ./interfaces.py:24
 msgid "Receiver email"
 msgstr ""
 
-#: ./mail.py:26
+#: ./interfaces.py:17
 msgid "Sender email"
 msgstr ""
 
-#: ./mail.py:20
+#: ./interfaces.py:11
 msgid "Subject"
 msgstr ""
 
-#: ./mail.py:21
+#: ./interfaces.py:12
 msgid "Subject of the message"
 msgstr ""
 
-#: ./mail.py:34
+#: ./interfaces.py:25
 msgid "The address where you want to send the e-mail message."
 msgstr ""
 
-#: ./mail.py:27
+#: ./interfaces.py:18
 msgid "The email address that sends the email. If no email is             provided here, it will use the portal from address."
 msgstr ""
 
-#: ./mail.py:40
+#: ./interfaces.py:31
 msgid "Type in here the message that you want to mail. Some             defined content can be replaced: ${portal} will be replaced by the title             of the portal. ${url} will be replaced by the URL of the newsletter.             ${channel} will be replaced by the newsletter channel name. ${subscriber} will be replaced by subscriber name."
 msgstr ""
 

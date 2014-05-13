@@ -1,7 +1,13 @@
 Changelog
 =========
 
-1.0.0dev (unreleased)
----------------------
+1.0.1 (unreleased)
+------------------
 
-- Initial release
+- Add new rule for confirmed subscriptions [cekk]
+
+
+1.0.0 (2012-11-09)
+------------------
+
+- Initial release [cekk]
