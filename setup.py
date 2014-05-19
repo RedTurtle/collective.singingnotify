@@ -32,8 +32,7 @@ setup(name='collective.singingnotify',
       extras_require=dict(test=tests_require),
       install_requires=[
           'setuptools',
-          'collective.dancing',
-          'collective.singing',
+          'collective.dancing > 0.9.10',
       ],
       entry_points="""
       # -*- Entry points: -*-

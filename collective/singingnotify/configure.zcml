@@ -11,9 +11,10 @@
   <i18n:registerTranslations directory="locales" />
   <include package="plone.contentrules" />
   <include package="plone.contentrules" file="meta.zcml" />
+  <include file="upgrades.zcml" />
 
   <interface 
-      interface="zope.app.intid.interfaces.IIntIdRemovedEvent"
+      interface="collective.dancing.events.IConfirmUnsubscriptionEvent"
       type="plone.contentrules.rule.interfaces.IRuleEventType"
       name="User unsubscribed from newsletter"
       i18n:attributes="name;"
@@ -27,7 +28,7 @@
       />
 
   <subscriber 
-    for="zope.app.intid.interfaces.IIntIdRemovedEvent"
+    for="collective.dancing.events.IConfirmUnsubscriptionEvent"
     handler=".handlers.unsubscribed" 
     />
 
@@ -58,7 +59,7 @@
     title="Send email when an user will unsubscribe from a channel"
     description="Send an email on the triggering object."
     for="collective.singing.interfaces.ISubscription"
-    event="zope.app.intid.interfaces.IIntIdRemovedEvent"
+    event="collective.dancing.events.IConfirmUnsubscriptionEvent"
     addview="plone.actions.SingingUnsubscribeNotify"
     editview="edit"
     schema=".mail.IUnsubscribeNotifyAction"
