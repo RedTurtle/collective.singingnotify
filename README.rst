@@ -8,15 +8,15 @@ This product add a new contentrule that can be applied in every folder and a spe
 
 The rule should be created in *Content Rules* control panel
 
-.. image:: http://dl.dropbox.com/u/8687422/add_contentrule.png
+.. image:: http://blog.redturtle.it/pypi-images/collective.singingnotify/add_contentrule.png
    :alt: Unsubscribed contentrule
-   :target: http://dl.dropbox.com/u/8687422/add_contentrule.png
+   :target: http://blog.redturtle.it/pypi-images/collective.singingnotify/add_contentrule.png
 
 After creating the new rule, you need to set the action:
 
-.. image:: http://dl.dropbox.com/u/8687422/unsubscribed_form.png
+.. image:: http://blog.redturtle.it/pypi-images/collective.singingnotify/unsubscribed_form.png
    :alt: Unsubscribed contentrule
-   :target: http://dl.dropbox.com/u/8687422/unsubscribed_form.png
+   :target: http://blog.redturtle.it/pypi-images/collective.singingnotify/unsubscribed_form.png
 
 If you use this product with `collective.dancefloor`__ you can set the rule in one single local newsletter, and set different messages in every local newsletter.
 
