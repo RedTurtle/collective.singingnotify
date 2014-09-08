@@ -1,22 +1,27 @@
 Introduction
 ============
-A customization for *Singing&Dancing* that sends a notify mail when an user will remove his subscription from a channel.
+A customization for *Singing&Dancing* that sends a notify mail on subscription events.
 
 Usage
 =====
-This product add a new contentrule that can be applied in every folder and a specified action that allows to send an email notification with some informations.
+This product add two new contentrules:
+
+- User confirm newsletter subscription
+- User unsubscribed from newsletter
+
+These rules can be applied in every folder, and there is a specific action that allows to send an email notification with some informations.
 
 The rule should be created in *Content Rules* control panel
 
 .. image:: http://blog.redturtle.it/pypi-images/collective.singingnotify/add_contentrule.png
-   :alt: Unsubscribed contentrule
-   :target: http://blog.redturtle.it/pypi-images/collective.singingnotify/add_contentrule.png
+   :alt: Add contentrule
+
 
 After creating the new rule, you need to set the action:
 
 .. image:: http://blog.redturtle.it/pypi-images/collective.singingnotify/unsubscribed_form.png
    :alt: Unsubscribed contentrule
-   :target: http://blog.redturtle.it/pypi-images/collective.singingnotify/unsubscribed_form.png
+
 
 If you use this product with `collective.dancefloor`__ you can set the rule in one single local newsletter, and set different messages in every local newsletter.
 
@@ -29,7 +34,7 @@ This product works with `Singing&Dancing`__.
 
 __ http://pypi.python.org/pypi/collective.dancing
 
-This product has been tested on Plone 3.3.5 (feedback on Plone 4 tests are welcome)
+This product has been tested on Plone 3.3.5 and Plone 4.2
 
 Credits
 =======

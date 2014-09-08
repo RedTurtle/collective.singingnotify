@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-24 09:43+0000\n"
+"POT-Creation-Date: 2014-05-13 14:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Andrea Cecchi <andrea.cecchi@redturtle.it>\n"
 "Language-Team: RedTurtle Technology <sviluppoplone@redturtle.it>\n"
@@ -14,55 +14,67 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.singingnotify\n"
 
-#: ./mail.py:133
+#: ./mail.py:199
+msgid "A mail action that sends email notify when an user confirm his subscription in a channel."
+msgstr "Viene spedita una notifica via mail quando un utente conferma la sua iscrizione al canale."
+
+#: ./mail.py:174
 msgid "A mail action that sends email notify when an user will unsubscribe from a channel."
 msgstr "Viene spedita una notifica via mail quando un utente si cancella da un canale."
 
-#: ./mail.py:132
+#: ./mail.py:198
+msgid "Add S&D Confirm Subscription Mail Action"
+msgstr "Aggiungi azione per conferma iscrizione da S&D"
+
+#: ./mail.py:173
 msgid "Add S&D Unsubscription Mail Action"
 msgstr "Aggiungi azione per cancellazione da S&D"
 
-#: ./mail.py:134
+#: ./mail.py:175
 msgid "Configure element"
 msgstr "Configura l'elemento"
 
-#: ./mail.py:147
+#: ./mail.py:213
+msgid "Edit S&D Confirm Subscription Mail Action"
+msgstr "Modifica azione per conferma iscrizione da S&D"
+
+#: ./mail.py:188
 msgid "Edit S&D Unsubscription Mail Action"
 msgstr "Modifica azione per cancellazione da S&D"
 
-#: ./mail.py:63
+#: ./mail.py:32
 msgid "Email report to ${dest_addr}"
-msgstr "Report email a ${dest_addr}"
+msgstr "Mail spedita a ${dest_addr}"
 
-#: ./mail.py:39
+#: ./interfaces.py:30
 msgid "Message"
 msgstr "Messaggio"
 
-#: ./mail.py:33
+#: ./interfaces.py:24
 msgid "Receiver email"
 msgstr "Destinatario"
 
-#: ./mail.py:26
+#: ./interfaces.py:17
 msgid "Sender email"
 msgstr "Mittente"
 
-#: ./mail.py:20
+#: ./interfaces.py:11
 msgid "Subject"
 msgstr "Oggetto"
 
-#: ./mail.py:21
+#: ./interfaces.py:12
 msgid "Subject of the message"
 msgstr "Oggetto del messaggio"
 
-#: ./mail.py:34
+#: ./interfaces.py:25
 msgid "The address where you want to send the e-mail message."
 msgstr "L'indirizzo a cui vuoi mandare i messaggi email."
 
-#: ./mail.py:27
+#: ./interfaces.py:18
 msgid "The email address that sends the email. If no email is             provided here, it will use the portal from address."
 msgstr "L'indirizzo email mittente. Se non è impostato, viene usato quello settato nel portale."
 
-#: ./mail.py:40
+#: ./interfaces.py:31
 msgid "Type in here the message that you want to mail. Some             defined content can be replaced: ${portal} will be replaced by the title             of the portal. ${url} will be replaced by the URL of the newsletter.             ${channel} will be replaced by the newsletter channel name. ${subscriber} will be replaced by subscriber name."
 msgstr "Scrivi qui il messaggio da spedire. Alcune parti del messaggio possono essere rimpiazzate: ${portal} verrà rimpiazzato dal nome del portale. ${url} verrà rimpiazzato dall'url della newsletter. ${channel} verrà rimpiazzato dal nome del canale della newsletter. ${subscriber} verrà rimpiazzato dall'indirizzo email che si è disiscritto."
 
