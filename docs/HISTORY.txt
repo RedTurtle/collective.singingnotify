@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.1 (unreleased)
+1.0.1 (2014-09-08)
 ------------------
 
 - Add new rule for confirmed subscriptions [cekk]
