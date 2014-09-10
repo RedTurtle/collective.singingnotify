@@ -147,8 +147,8 @@ class MailActionConfirmExecutor(MailActionExecutor):
             from_name = portal.getProperty('email_from_name')
             source_addr = "%s <%s>" % (from_name, from_address)
         channel = self.event.object
-        subscriber = self.event.subscriber
-        composer_data = getattr(subscriber, 'composer_data', None)
+        subscription = self.event.subscription
+        composer_data = getattr(subscription, 'composer_data', None)
         folder_url = self.context.absolute_url()
         message = self.element.message
         message = message.replace("${url}", folder_url)

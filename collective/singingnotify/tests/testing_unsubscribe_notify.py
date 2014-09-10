@@ -1,29 +1,21 @@
 # -*- coding: UTF-8 -*-
-
+from collective.dancing.events import IConfirmUnsubscriptionEvent
+from collective.singing.interfaces import ISubscription
+from collective.singingnotify.mail import UnsubscribeNotifyAction, UnsubscribeNotifyAddForm, UnsubscribeNotifyEditForm
 from email.MIMEText import MIMEText
-from zope.component import getUtility, getMultiAdapter, getSiteManager
-from zope.app.intid.interfaces import IIntIdRemovedEvent
-from zope.interface import implements
-
 from plone.app.contentrules.rule import Rule
 from plone.app.contentrules.tests.base import ContentRulesTestCase
 from plone.contentrules.engine.interfaces import IRuleStorage
 from plone.contentrules.rule.interfaces import IRuleAction, IExecutable
-from collective.singingnotify.mail import UnsubscribeNotifyAction, UnsubscribeNotifyAddForm, UnsubscribeNotifyEditForm
-
-from Products.CMFCore.utils import getToolByName
-
 from Products.MailHost.interfaces import IMailHost
 from Products.SecureMailHost.SecureMailHost import SecureMailHost
-
-from Products.PloneTestCase.setup import default_user
-from collective.singing.interfaces import ISubscription
-
+from zope.component import getUtility, getMultiAdapter, getSiteManager
+from zope.interface import implements
 # basic test structure copied from plone.app.contentrules test_action_mail.py
 
 
 class DummyEvent(object):
-    implements(IIntIdRemovedEvent)
+    implements(IConfirmUnsubscriptionEvent)
 
     def __init__(self, object):
         self.object = object
@@ -51,7 +43,7 @@ class TestUnsubscribeAction(ContentRulesTestCase):
         self.assertEquals('plone.actions.SingingUnsubscribeNotify', element.addview)
         self.assertEquals('edit', element.editview)
         self.assertEquals(ISubscription, element.for_)
-        self.assertEquals(IIntIdRemovedEvent, element.event)
+        self.assertEquals(IConfirmUnsubscriptionEvent, element.event)
 
     def testInvokeAddView(self):
         element = getUtility(IRuleAction, name='plone.actions.SingingUnsubscribeNotify')

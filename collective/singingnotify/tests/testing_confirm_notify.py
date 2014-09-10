@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+from collective.dancing.events import IConfirmSubscriptionEvent
+from collective.dancing.subscribe import Subscription
 from collective.singing.interfaces import IChannel
 from collective.singingnotify.mail import ConfirmNotifyAction, ConfirmNotifyAddForm, ConfirmNotifyEditForm
 from email.MIMEText import MIMEText
@@ -8,8 +10,6 @@ from plone.contentrules.engine.interfaces import IRuleStorage
 from plone.contentrules.rule.interfaces import IRuleAction, IExecutable
 from Products.MailHost.interfaces import IMailHost
 from Products.SecureMailHost.SecureMailHost import SecureMailHost
-from collective.dancing.events import IConfirmSubscriptionEvent
-from collective.dancing.subscribe import Subscription
 from zope.component import getUtility, getMultiAdapter, getSiteManager
 from zope.interface import implements
 
@@ -21,7 +21,7 @@ class DummyEvent(object):
 
     def __init__(self, object):
         self.object = object
-        self.subscriber = Subscription(channel=self.object,
+        self.subscription = Subscription(channel=self.object,
                                        collector_data={},
                                        composer_data={'email': u'example@foo.it'},
                                        metadata='',
